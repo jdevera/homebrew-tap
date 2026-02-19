@@ -5,13 +5,13 @@
 class GitAs < Formula
   desc "Identity switching for git and GitHub CLI"
   homepage "https://github.com/jdevera/git-this-bread"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jdevera/git-this-bread/releases/download/v0.1.1/git-as_0.1.1_darwin_amd64.tar.gz"
-      sha256 "315ebc14ad0b5c554bf9c8e814fc6d082be83c5410994879ac727f47c566e87a"
+      url "https://github.com/jdevera/git-this-bread/releases/download/v0.1.2/git-as_0.1.2_darwin_amd64.tar.gz"
+      sha256 "8a77bdf64c7de2fde7c9a6df1d48753eebc59d355f521e3106ba2f7c3a54788c"
 
       def install
         bin.install "git-id"
@@ -20,8 +20,8 @@ class GitAs < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jdevera/git-this-bread/releases/download/v0.1.1/git-as_0.1.1_darwin_arm64.tar.gz"
-      sha256 "0c37161113f9dbae39d9e229864ac336982d6ab823e0536ffd0fca1153985e17"
+      url "https://github.com/jdevera/git-this-bread/releases/download/v0.1.2/git-as_0.1.2_darwin_arm64.tar.gz"
+      sha256 "c084cd0d7a3751b589537cf6e1f13f5c9ea214a07e8057e3eba5b88b3aeff3f2"
 
       def install
         bin.install "git-id"
@@ -33,8 +33,8 @@ class GitAs < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jdevera/git-this-bread/releases/download/v0.1.1/git-as_0.1.1_linux_amd64.tar.gz"
-      sha256 "513ffc3870ab0e73292bc30becb0578500f82c1a02ad809a0427f3b41a55ddfc"
+      url "https://github.com/jdevera/git-this-bread/releases/download/v0.1.2/git-as_0.1.2_linux_amd64.tar.gz"
+      sha256 "cfc6c3e04c3295c809eba677afa944e7eb5f783d7549a030fb5bccafafebf42d"
       def install
         bin.install "git-id"
         bin.install "git-as"
@@ -42,8 +42,8 @@ class GitAs < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jdevera/git-this-bread/releases/download/v0.1.1/git-as_0.1.1_linux_arm64.tar.gz"
-      sha256 "c422c4379d21029a5a84652782e4cbf46c1a1c936a9057ebbe15b6b338e442a5"
+      url "https://github.com/jdevera/git-this-bread/releases/download/v0.1.2/git-as_0.1.2_linux_arm64.tar.gz"
+      sha256 "ed35db7ed073ca79a12d0b4af3463c65b7c06e596d30dfef816bbf8c06f52b34"
       def install
         bin.install "git-id"
         bin.install "git-as"
