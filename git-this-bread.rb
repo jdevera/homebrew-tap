@@ -5,53 +5,57 @@
 class GitThisBread < Formula
   desc "Git utilities for developers who knead to understand their repos"
   homepage "https://github.com/jdevera/git-this-bread"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jdevera/git-this-bread/releases/download/v0.1.2/git-this-bread_0.1.2_darwin_amd64.tar.gz"
-      sha256 "e85f7661707f9806ebaedfe806418b0edbac09318ec65b2a28257dbe417527d2"
+      url "https://github.com/jdevera/git-this-bread/releases/download/v0.1.3/git-this-bread_0.1.3_darwin_amd64.tar.gz"
+      sha256 "e0ee6b31367b385843f24db2a57deb5bcac1715e475df320994da24fe8ff0343"
 
       def install
         bin.install "git-explain"
         bin.install "git-id"
         bin.install "git-as"
         bin.install "gh-as"
+        bin.install "gh-wtfork"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jdevera/git-this-bread/releases/download/v0.1.2/git-this-bread_0.1.2_darwin_arm64.tar.gz"
-      sha256 "2ca1b5763c005907267cdd0933c8f5f42130559d6e71bcfab92ddd0481521fea"
+      url "https://github.com/jdevera/git-this-bread/releases/download/v0.1.3/git-this-bread_0.1.3_darwin_arm64.tar.gz"
+      sha256 "26d792d80501a82d97a36885036e5c3e1cf2276af17ca78684cc2a0e5db78d21"
 
       def install
         bin.install "git-explain"
         bin.install "git-id"
         bin.install "git-as"
         bin.install "gh-as"
+        bin.install "gh-wtfork"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jdevera/git-this-bread/releases/download/v0.1.2/git-this-bread_0.1.2_linux_amd64.tar.gz"
-      sha256 "385dab4c46e1ec7d088248142de6d6df79f54b33f9e55ba3200393db144db121"
+      url "https://github.com/jdevera/git-this-bread/releases/download/v0.1.3/git-this-bread_0.1.3_linux_amd64.tar.gz"
+      sha256 "66bed174e8eb3a2bcb3af12866b58ef08333a975527618c696485f982f8d5691"
       def install
         bin.install "git-explain"
         bin.install "git-id"
         bin.install "git-as"
         bin.install "gh-as"
+        bin.install "gh-wtfork"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jdevera/git-this-bread/releases/download/v0.1.2/git-this-bread_0.1.2_linux_arm64.tar.gz"
-      sha256 "2630ca309dc38cdc30677cbf3537f6b7e70bf175b5ab5ddb58afe616d420a1d7"
+      url "https://github.com/jdevera/git-this-bread/releases/download/v0.1.3/git-this-bread_0.1.3_linux_arm64.tar.gz"
+      sha256 "1ec6dbe41a94b56da955945c7f0b7671ab20d1fb8bbbf8f7392baedbb5e35427"
       def install
         bin.install "git-explain"
         bin.install "git-id"
         bin.install "git-as"
         bin.install "gh-as"
+        bin.install "gh-wtfork"
       end
     end
   end
