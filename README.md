@@ -1,10 +1,11 @@
 # Homebrew Tap
 
-Install tools with:
+## git-this-bread
+
+A suite of git utilities for developers who knead to understand their repos.
 
 ```bash
-brew install jdevera/tap/git-explain
-brew install jdevera/tap/git-as
+brew install jdevera/tap/git-this-bread
 ```
 
-Source: [git-this-bread](https://github.com/jdevera/git-this-bread)
+See [git-this-bread](https://github.com/jdevera/git-this-bread) for documentation.
