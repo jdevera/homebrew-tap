@@ -5,13 +5,13 @@
 class GitThisBread < Formula
   desc "Git utilities for developers who knead to understand their repos"
   homepage "https://github.com/jdevera/git-this-bread"
-  version "0.1.3"
+  version "0.1.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jdevera/git-this-bread/releases/download/v0.1.3/git-this-bread_0.1.3_darwin_amd64.tar.gz"
-      sha256 "e0ee6b31367b385843f24db2a57deb5bcac1715e475df320994da24fe8ff0343"
+      url "https://github.com/jdevera/git-this-bread/releases/download/v0.1.4/git-this-bread_0.1.4_darwin_amd64.tar.gz"
+      sha256 "6501dc596f95d4cf012a9bf2ebde9ea6a3c6fed58ea181050da9934fe3f9d33b"
 
       def install
         bin.install "git-explain"
@@ -22,8 +22,8 @@ class GitThisBread < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jdevera/git-this-bread/releases/download/v0.1.3/git-this-bread_0.1.3_darwin_arm64.tar.gz"
-      sha256 "26d792d80501a82d97a36885036e5c3e1cf2276af17ca78684cc2a0e5db78d21"
+      url "https://github.com/jdevera/git-this-bread/releases/download/v0.1.4/git-this-bread_0.1.4_darwin_arm64.tar.gz"
+      sha256 "97327459eeff308aefb6fd07073303867b62c7730b08c6c1654e960f65a29562"
 
       def install
         bin.install "git-explain"
@@ -37,8 +37,8 @@ class GitThisBread < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jdevera/git-this-bread/releases/download/v0.1.3/git-this-bread_0.1.3_linux_amd64.tar.gz"
-      sha256 "66bed174e8eb3a2bcb3af12866b58ef08333a975527618c696485f982f8d5691"
+      url "https://github.com/jdevera/git-this-bread/releases/download/v0.1.4/git-this-bread_0.1.4_linux_amd64.tar.gz"
+      sha256 "0085ef9c623bd29220390c5edd6a5d20cc68b98ae853132943d4cde4ecba8236"
       def install
         bin.install "git-explain"
         bin.install "git-id"
@@ -48,8 +48,8 @@ class GitThisBread < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jdevera/git-this-bread/releases/download/v0.1.3/git-this-bread_0.1.3_linux_arm64.tar.gz"
-      sha256 "1ec6dbe41a94b56da955945c7f0b7671ab20d1fb8bbbf8f7392baedbb5e35427"
+      url "https://github.com/jdevera/git-this-bread/releases/download/v0.1.4/git-this-bread_0.1.4_linux_arm64.tar.gz"
+      sha256 "7a3a303b3f7d98090a5d14e3f03cb2eb5bc97b6a42e53d3221473a318d229cd0"
       def install
         bin.install "git-explain"
         bin.install "git-id"
