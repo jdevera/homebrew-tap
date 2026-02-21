@@ -5,21 +5,21 @@
 class GitExplain < Formula
   desc "See your contribution status across git repositories"
   homepage "https://github.com/jdevera/git-this-bread"
-  version "0.1.3"
+  version "0.1.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jdevera/git-this-bread/releases/download/v0.1.3/git-explain_0.1.3_darwin_amd64.tar.gz"
-      sha256 "2b7d193c5abd7d8e8e4540c5d353c082d3b5c6c3e3a640a2ad2ad071ee01dee6"
+      url "https://github.com/jdevera/git-this-bread/releases/download/v0.1.4/git-explain_0.1.4_darwin_amd64.tar.gz"
+      sha256 "8e55ca0af789eac0a307477a5b1131766c8acb85fa7764e175250f32a9761772"
 
       def install
         bin.install "git-explain"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jdevera/git-this-bread/releases/download/v0.1.3/git-explain_0.1.3_darwin_arm64.tar.gz"
-      sha256 "62e38894dd77a931c97e443e3c58ef929627ed93851339433cd5164af33d7493"
+      url "https://github.com/jdevera/git-this-bread/releases/download/v0.1.4/git-explain_0.1.4_darwin_arm64.tar.gz"
+      sha256 "0126fd557cf4bf6097df2f7d9934ad142fb8f54275e8f646ec66604f6869006d"
 
       def install
         bin.install "git-explain"
@@ -29,15 +29,15 @@ class GitExplain < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jdevera/git-this-bread/releases/download/v0.1.3/git-explain_0.1.3_linux_amd64.tar.gz"
-      sha256 "d6721568b4f66745fb80a03bcebafbc737c33c570a327bfdfa67ed44f668a181"
+      url "https://github.com/jdevera/git-this-bread/releases/download/v0.1.4/git-explain_0.1.4_linux_amd64.tar.gz"
+      sha256 "5b4aa3480e6a6ea7d837b931d991f6f5b56b920da7217e2cd10fddb89b1923c0"
       def install
         bin.install "git-explain"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jdevera/git-this-bread/releases/download/v0.1.3/git-explain_0.1.3_linux_arm64.tar.gz"
-      sha256 "7ce35c5a0a81e7257e0faa805375720c3f62cfb29eb33263855341360a2df460"
+      url "https://github.com/jdevera/git-this-bread/releases/download/v0.1.4/git-explain_0.1.4_linux_arm64.tar.gz"
+      sha256 "808e721caf0df0d42b1e36f29687fc04f4970ed0ccd8f2299bc01f130f273495"
       def install
         bin.install "git-explain"
       end
