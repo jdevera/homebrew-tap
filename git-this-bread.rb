@@ -5,13 +5,13 @@
 class GitThisBread < Formula
   desc "Git utilities for developers who knead to understand their repos"
   homepage "https://github.com/jdevera/git-this-bread"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jdevera/git-this-bread/releases/download/v0.2.0/git-this-bread_0.2.0_darwin_amd64.tar.gz"
-      sha256 "ce2ddb8d017d2846b91b2b2bf9fdeb6ba3b0dafbdcf84cc45943d16af994443c"
+      url "https://github.com/jdevera/git-this-bread/releases/download/v0.2.1/git-this-bread_0.2.1_darwin_amd64.tar.gz"
+      sha256 "dbc9a96f966c12552cffbd6c9c50704cb7b1eda12351054d02ebe1f4e2e788f1"
 
       define_method(:install) do
         bin.install "git-explain"
@@ -22,8 +22,8 @@ class GitThisBread < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jdevera/git-this-bread/releases/download/v0.2.0/git-this-bread_0.2.0_darwin_arm64.tar.gz"
-      sha256 "a0621a89e8d0378ce5cf296d907dfade1e44b3f4ed01bf20dcbc81f6590ec559"
+      url "https://github.com/jdevera/git-this-bread/releases/download/v0.2.1/git-this-bread_0.2.1_darwin_arm64.tar.gz"
+      sha256 "3c1b9e055a897f6d5ef181aef8399021e2b7d0ebe04ae05045a0fbbb8b96ea45"
 
       define_method(:install) do
         bin.install "git-explain"
@@ -37,8 +37,8 @@ class GitThisBread < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jdevera/git-this-bread/releases/download/v0.2.0/git-this-bread_0.2.0_linux_amd64.tar.gz"
-      sha256 "1e5f42a8b53f9e051fb2c993c386decf5e26d83275ed720f6a47a423cdeccac3"
+      url "https://github.com/jdevera/git-this-bread/releases/download/v0.2.1/git-this-bread_0.2.1_linux_amd64.tar.gz"
+      sha256 "ca34ccdb7df0db15a4834ece2f38aca49e71c86c518242454b748bb04510092c"
       define_method(:install) do
         bin.install "git-explain"
         bin.install "git-id"
@@ -48,8 +48,8 @@ class GitThisBread < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jdevera/git-this-bread/releases/download/v0.2.0/git-this-bread_0.2.0_linux_arm64.tar.gz"
-      sha256 "a5d76e6ad986863feeefdb90179d869aea0cbbc73c5c65f2e6f178d5acc969ec"
+      url "https://github.com/jdevera/git-this-bread/releases/download/v0.2.1/git-this-bread_0.2.1_linux_arm64.tar.gz"
+      sha256 "bb6e072395d4e3273f796bdb856a95819fa62e9a60294b989bc56d586f586284"
       define_method(:install) do
         bin.install "git-explain"
         bin.install "git-id"
