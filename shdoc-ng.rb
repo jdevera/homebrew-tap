@@ -5,21 +5,21 @@
 class ShdocNg < Formula
   desc "Documentation generator for shell scripts"
   homepage "https://github.com/jdevera/shdoc-ng"
-  version "0.6.7"
+  version "0.7.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jdevera/shdoc-ng/releases/download/v0.6.7/shdoc-ng_0.6.7_darwin_amd64.tar.gz"
-      sha256 "0f0ea35deb93497016b620bbfaccc58379f55c2efad41c6447e2b428a6efe2dc"
+      url "https://github.com/jdevera/shdoc-ng/releases/download/v0.7.2/shdoc-ng_0.7.2_darwin_amd64.tar.gz"
+      sha256 "a5020a6ff96957a7870293e943e876eede765489e83b132f31aac6378d573d3a"
 
       define_method(:install) do
         bin.install "shdoc-ng"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jdevera/shdoc-ng/releases/download/v0.6.7/shdoc-ng_0.6.7_darwin_arm64.tar.gz"
-      sha256 "7615defc645acd863c385ec710518084a1128166086048dff70f8d849c08732c"
+      url "https://github.com/jdevera/shdoc-ng/releases/download/v0.7.2/shdoc-ng_0.7.2_darwin_arm64.tar.gz"
+      sha256 "f6944d812e73536f0ae458a002079146a7b9bf5e13b50565e834c7e616985b54"
 
       define_method(:install) do
         bin.install "shdoc-ng"
@@ -29,15 +29,15 @@ class ShdocNg < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jdevera/shdoc-ng/releases/download/v0.6.7/shdoc-ng_0.6.7_linux_amd64.tar.gz"
-      sha256 "9c0b37cef6f66cd6df2c88c03f91fc3565185f2bce5f7a44bed2c6811d87be9e"
+      url "https://github.com/jdevera/shdoc-ng/releases/download/v0.7.2/shdoc-ng_0.7.2_linux_amd64.tar.gz"
+      sha256 "9e119fed449136b2335bda0ec1e3a1a7966fba47556901a2e789d6cc5bd3ef30"
       define_method(:install) do
         bin.install "shdoc-ng"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jdevera/shdoc-ng/releases/download/v0.6.7/shdoc-ng_0.6.7_linux_arm64.tar.gz"
-      sha256 "6b4fe8a2df22a2ff77f9b4f0d174f10ee50794a8a9418562639d2899e8440b95"
+      url "https://github.com/jdevera/shdoc-ng/releases/download/v0.7.2/shdoc-ng_0.7.2_linux_arm64.tar.gz"
+      sha256 "9f0d63c5694de67dc7b55db4708db1ac73770de09c74bf5d51a17415b7ccf841"
       define_method(:install) do
         bin.install "shdoc-ng"
       end
