@@ -2,15 +2,39 @@
 
 <!-- BEGIN GENERATED PACKAGES -->
 
-## git-this-bread
+## Formulae
 
-A suite of git utilities for developers who knead to understand their repos.
+### git-this-bread
+
+Git utilities for developers who knead to understand their repos
 
 ```bash
 brew install jdevera/tap/git-this-bread
 ```
 
 See [git-this-bread](https://github.com/jdevera/git-this-bread) for documentation.
+
+### shdoc-ng
+
+Documentation generator for shell scripts
+
+```bash
+brew install jdevera/tap/shdoc-ng
+```
+
+See [shdoc-ng](https://github.com/jdevera/shdoc-ng) for documentation.
+
+## Casks
+
+### bluetooth-blocklist
+
+Manage per-address incoming Bluetooth Classic blocks
+
+```bash
+brew install --cask jdevera/tap/bluetooth-blocklist
+```
+
+See [bluetooth-blocklist](https://github.com/jdevera/bluetooth-blocklist) for documentation.
 
 <!-- END GENERATED PACKAGES -->
 
