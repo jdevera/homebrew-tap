@@ -1,0 +1,59 @@
+name: Update README
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - name: Test the README generator
+        run: ruby test/readme_generator_test.rb
+      - name: Validate package metadata
+        run: ruby scripts/update_readme.rb
+
+  update:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: validate
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    concurrency:
+      group: update-readme-main
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: main
+      - name: Regenerate and commit the package list
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git checkout --detach FETCH_HEAD
+            ruby scripts/update_readme.rb
+
+            if git diff --quiet -- README.md; then
+              exit 0
+            fi
+
+            git add -- README.md
+            git commit -m "docs: update README package list"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+          done
+
+          echo "Could not push the README update after three attempts." >&2
+          exit 1
