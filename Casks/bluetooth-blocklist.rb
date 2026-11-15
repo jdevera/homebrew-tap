@@ -8,7 +8,7 @@ cask "bluetooth-blocklist" do
   homepage "https://github.com/jdevera/bluetooth-blocklist"
 
   depends_on arch: :arm64
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   pkg "Bluetooth-Blocklist-#{version}-arm64.pkg"
   binary "/Applications/Bluetooth Blocklist.app/Contents/Helpers/bluetooth-blocklist"
