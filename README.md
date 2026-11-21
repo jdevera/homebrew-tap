@@ -4,6 +4,16 @@
 
 ## Formulae
 
+### blotter
+
+Records agent guard blocks and failures in local SQLite
+
+```bash
+brew install jdevera/tap/blotter
+```
+
+See [blotter](https://github.com/jdevera/blotter) for documentation.
+
 ### git-this-bread
 
 Git utilities for developers who knead to understand their repos
