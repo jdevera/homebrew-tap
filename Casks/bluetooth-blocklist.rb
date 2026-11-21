@@ -1,6 +1,6 @@
 cask "bluetooth-blocklist" do
-  version "0.4.0"
-  sha256 "7e546cafed885ee08be93dfa821d01d92957379c55685b9c627bd808e2d59d39"
+  version "0.4.1"
+  sha256 "ed5bc449a3b5c0680dbe18e46ff2dc908aa79a8344d9845e67d4013465c1967b"
 
   url "https://github.com/jdevera/bluetooth-blocklist/releases/download/v#{version}/Bluetooth-Blocklist-#{version}-arm64.pkg"
   name "Bluetooth Blocklist"
