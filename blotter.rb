@@ -5,21 +5,21 @@
 class Blotter < Formula
   desc "Records agent guard blocks and failures in local SQLite"
   homepage "https://github.com/jdevera/blotter"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jdevera/blotter/releases/download/v0.1.0/blotter_0.1.0_darwin_amd64.tar.gz"
-      sha256 "2027e08e5a4c9a7347273ae4c15e40626f771849dda402e8e55cb476370195a7"
+      url "https://github.com/jdevera/blotter/releases/download/v0.2.0/blotter_0.2.0_darwin_amd64.tar.gz"
+      sha256 "bc8f354d4feb0e280284bf6fd09648dce18bc35d8440e512683cdd338f58b41f"
 
       define_method(:install) do
         bin.install "blotter"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jdevera/blotter/releases/download/v0.1.0/blotter_0.1.0_darwin_arm64.tar.gz"
-      sha256 "cff6d6cb258602d9f16ffad24e37e0d65d27451496670eb67a729900a61e51c5"
+      url "https://github.com/jdevera/blotter/releases/download/v0.2.0/blotter_0.2.0_darwin_arm64.tar.gz"
+      sha256 "32f6dda44864e65920bf32207abaa0121f90542594199dc0544a54425c569cdd"
 
       define_method(:install) do
         bin.install "blotter"
@@ -29,15 +29,15 @@ class Blotter < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jdevera/blotter/releases/download/v0.1.0/blotter_0.1.0_linux_amd64.tar.gz"
-      sha256 "72430f5369b3b1a743935e679f17f42afac0e6e5de9524188f7e6304bf0160e1"
+      url "https://github.com/jdevera/blotter/releases/download/v0.2.0/blotter_0.2.0_linux_amd64.tar.gz"
+      sha256 "4d6cd6032b9d39fa72e4442654d2119c8e9038e86cb44ec01028c4fc12c8ce74"
       define_method(:install) do
         bin.install "blotter"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jdevera/blotter/releases/download/v0.1.0/blotter_0.1.0_linux_arm64.tar.gz"
-      sha256 "e2c091bf117c118243978a1f69fa022eba2f8f6a7ff9eb849b2cd63f0e79973d"
+      url "https://github.com/jdevera/blotter/releases/download/v0.2.0/blotter_0.2.0_linux_arm64.tar.gz"
+      sha256 "33b7dea7c94a0d77d379ecd920b1cacf16bbfa42e57e969f307202c72214c167"
       define_method(:install) do
         bin.install "blotter"
       end
