@@ -5,41 +5,45 @@
 class Blotter < Formula
   desc "Records agent guard blocks and failures in local SQLite"
   homepage "https://github.com/jdevera/blotter"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jdevera/blotter/releases/download/v0.3.0/blotter_0.3.0_darwin_amd64.tar.gz"
-      sha256 "b7e91b1bb39738b6f50138f0a17b77cd6192c79e4dcc958f31879057afa00d1e"
+      url "https://github.com/jdevera/blotter/releases/download/v0.4.0/blotter_0.4.0_darwin_amd64.tar.gz"
+      sha256 "3e47a32b743a00228f0b02d3c17eb914e746347e2cf92906117e4eaa2c878709"
 
       define_method(:install) do
         bin.install "blotter"
+        generate_completions_from_executable(bin/"blotter", shell_parameter_format: :cobra)
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jdevera/blotter/releases/download/v0.3.0/blotter_0.3.0_darwin_arm64.tar.gz"
-      sha256 "e14b1eb448e1de0db4dac3973367a1eed7dd0ded9a4377fcca8f1eee1f2c6d2b"
+      url "https://github.com/jdevera/blotter/releases/download/v0.4.0/blotter_0.4.0_darwin_arm64.tar.gz"
+      sha256 "17ff2c712de116a3a458269b739870142bee7cc40ea3029248786ab6db9ee2a9"
 
       define_method(:install) do
         bin.install "blotter"
+        generate_completions_from_executable(bin/"blotter", shell_parameter_format: :cobra)
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jdevera/blotter/releases/download/v0.3.0/blotter_0.3.0_linux_amd64.tar.gz"
-      sha256 "deb64388b8b0054d492d440f74c6d9e57d4caaef7fe9ab70177cb1ea5583dea6"
+      url "https://github.com/jdevera/blotter/releases/download/v0.4.0/blotter_0.4.0_linux_amd64.tar.gz"
+      sha256 "691b00a60c876677f093d99b36b3022ef2a44c1ee33d0aa5ccc07f040bcb1fbc"
       define_method(:install) do
         bin.install "blotter"
+        generate_completions_from_executable(bin/"blotter", shell_parameter_format: :cobra)
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jdevera/blotter/releases/download/v0.3.0/blotter_0.3.0_linux_arm64.tar.gz"
-      sha256 "e19c55f8c9538b5dc0da83b20d675fa9c86382a653455f97ff85c18a0657df10"
+      url "https://github.com/jdevera/blotter/releases/download/v0.4.0/blotter_0.4.0_linux_arm64.tar.gz"
+      sha256 "1e3d334a34fdcc080ada287bbbb010b76ba410e80645c112520988be28866a6c"
       define_method(:install) do
         bin.install "blotter"
+        generate_completions_from_executable(bin/"blotter", shell_parameter_format: :cobra)
       end
     end
   end
